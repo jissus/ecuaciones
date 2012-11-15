@@ -1,34 +1,26 @@
 package ar.edu.unlam.tallerweb.ecuaciones;
-
-/**
- * Representa una ecuación lineal del tipo f(x) = m × x + b
- *
- */
+/*Profesor Lucas */
 public class EcuacionLineal implements Ecuacion {
 
-	/**
-	 * Constructor parametrizado
-	 *
-	 * @param m la pendiente
-	 * @param b la ordenada al orígen
-	 *
-	 */
-	public EcuacionLineal(Double m, Double b) {
-
+	private Double m;
+	private Double b;
+	
+	public EcuacionLineal(Double m, Double b) throws RuntimeException{
+		if(m!=null && b!= null){
+		this.m=m;
+		this.b=b;
+	}else{ 
 		throw new RuntimeException("No implementado");
-
+		}
 	}
 
-	/**
-	 * Devuelve el resultado de evaluar f(x)
-	 *
-	 * @param x la variable
-	 *
-	 */
-	public Double resolver(Double x) {
-
+	public Double resolver(Double x) throws RuntimeException{
+		if(x!=null){
+		Double y=(this.m.doubleValue()*x.doubleValue())+this.b.doubleValue();
+		return Math.abs(y.doubleValue());
+		}else{
 		throw new RuntimeException("No implementado");
-
+		}
 	}
 
 }

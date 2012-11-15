@@ -1,5 +1,7 @@
 package ar.edu.unlam.tallerweb.ecuaciones;
+/*Profesor Lucas */
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -9,39 +11,28 @@ import java.util.List;
  */
 public class EcuacionPolinomica implements Ecuacion {
 
-	/**
-	 * Constructor parametrizado
-	 *
-	 * @param coeficientes siendo coeficientes[0] el valor que
-	 * corresponde al término independiente.
-	 *
-	 * e.g.
-	 *
-	 * f(x) = coeficientes[0]
-	 * 		+ coeficientes[1] × x
-	 * 		+ coeficientes[2] × x^2
-	 * 		+ ...
-	 *
-	 * coeficientes = [1, 0, 2, 1, -1]
-	 * f(x) = 1 × x^0 + 0 × x^1 + 2 × x^2 + 1 × x^3 - 1 × x^4
-	 *
-	 */
-	public EcuacionPolinomica(List<Double> coeficientes) {
-
-		throw new RuntimeException("No implementado");
-
+	private List<Double> miLista = new ArrayList<Double>();
+	
+	public EcuacionPolinomica(List<Double>miLista) throws RuntimeException{
+		if(miLista!=null){
+		this.miLista=miLista;
+		}else{ 
+			throw new RuntimeException("No implementado");
+			}
 	}
 
-	/**
-	 * Devuelve el resultado de evaluar f(x)
-	 *
-	 * @param x la variable
-	 *
-	 */
 	public Double resolver(Double x) {
+		if(x!=null){
+			Double suma = 0.0;
+			for(int i=0;i<this.miLista.size();i++){
+				suma=suma.doubleValue()+(miLista.get(i).doubleValue()*Math.pow(x.doubleValue(),i));
+			}
+		return suma.doubleValue();
 
-		throw new RuntimeException("No implementado");
-
+		}else{
+			throw new RuntimeException("No implementado");
+		}
 	}
 
 }
+

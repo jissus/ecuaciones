@@ -18,15 +18,14 @@ public class IntegralTest {
 
 		IntegralDeArea integral = new IntegralDeArea();
 		Double incremento = 0.01;
-		Double areaObtenida = integral.calcular(ecuacion, 0.0, 1.0, incremento);
+		Double areaObtenida = integral.calcular(ecuacion, 0.0, 2.0, incremento);
 
 		
 		Double precision = 0.01;
-		Double areaEsperada = 0.5;
+		Double areaEsperada = 2.0;
 		assertEquals(
 				"Se espera que el área bajo la recta identidad entre 0 y 1 sea 1/2",
 				areaEsperada, areaObtenida.doubleValue(), precision);
-
 	}
 
 }

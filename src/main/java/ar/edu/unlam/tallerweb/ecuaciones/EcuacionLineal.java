@@ -2,8 +2,8 @@ package ar.edu.unlam.tallerweb.ecuaciones;
 
 public class EcuacionLineal implements Ecuacion {
 
-	final private Double m;
-	final private Double b;
+	private final Double m;
+	private final Double b;
 	
 	public EcuacionLineal(Double m, Double b) throws RuntimeException{
 		if(m!=null && b!= null){
@@ -16,7 +16,7 @@ public class EcuacionLineal implements Ecuacion {
 
 	public Double resolver(Double x) throws RuntimeException{
 		if(x!=null){
-		Double y=(this.m.doubleValue()*x.doubleValue())+this.b.doubleValue();
+		Double y=(m.doubleValue()*x.doubleValue())+b.doubleValue();
 		return Math.abs(y.doubleValue());
 		}else{
 		throw new RuntimeException("No implementado");

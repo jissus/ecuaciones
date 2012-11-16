@@ -1,9 +1,9 @@
 package ar.edu.unlam.tallerweb.ecuaciones;
-/*Profesor Lucas */
+
 public class EcuacionLineal implements Ecuacion {
 
-	private Double m;
-	private Double b;
+	final private Double m;
+	final private Double b;
 	
 	public EcuacionLineal(Double m, Double b) throws RuntimeException{
 		if(m!=null && b!= null){

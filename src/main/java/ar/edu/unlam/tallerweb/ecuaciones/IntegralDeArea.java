@@ -18,7 +18,7 @@ public class IntegralDeArea {
 	 * @return el área bajo la curva
 	 */
 	public Double calcular(Ecuacion ecuacion, Double inicio, Double fin, Double incremento) {
-		if(ecuacion!=null && inicio!=null && fin!=null && incremento!=null ){
+		if(ecuacion!=null&&inicio!=null&&fin!=null&&incremento!=null){
 		Double resultado = 0.0;
 		Double x = 0.0;
 		Double mitadIncremento = (incremento.doubleValue()/2);
